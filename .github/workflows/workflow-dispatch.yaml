@@ -1,0 +1,27 @@
+name: Run GoLang
+on: workflow_dispatch
+
+env:
+  GO_VERSION: 1.18
+
+jobs:
+  workflowdispatch:
+    name: golang
+    runs-on: test
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-go@v3
+        with:
+          go-version: ${{ env.GO_VERSION }}
+          check-latest: true
+
+      - name: Run Go Lang Hello world
+        run: |
+          cd code/go && \
+          ls && \
+          go mod init helloworld && \
+          ls && \
+          go run workflow-dispatch.go
