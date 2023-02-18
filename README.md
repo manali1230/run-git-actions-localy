@@ -20,7 +20,7 @@ For more details [check](https://github.com/nektos/act.git) nektos/act repositor
 ./bin/act -W .github/workflows/main.yaml -P test=catthehacker/ubuntu:act-18.04
 ```
 
-Where,
-`-W` - used to pass your workflow file
+Where,/
+`-W` - used to pass your workflow file/
 `-P` - used to pass runner docker image
 
